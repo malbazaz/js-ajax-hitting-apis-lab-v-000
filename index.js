@@ -15,7 +15,10 @@ function displayRepositories(){
   const list = repos.map(r=>{
       console.log(r)
     `<a href=${r.html_url}>${r.name}</a>
-     <a href="#" data-repository = "${r.name}" onclick=${getCommits(this)}> Get Commits </a> </li>`
+     <a href="#" 
+     data-repository="${r.name}"
+     data-username="${r.owner.login}" 
+     onclick=${getCommits(this)}> Get Commits </a> </li>`
   })
   const repoList = `<ul> ${repos.map(r => '<li>' + `<a href = https://github.com/users/${username}/${r.name}>`+ r.name +'</a>'+' ' + '<a href="#"' + 'onclick="getCommits(this)"> Get Commits </a> </li>').join('')}</ul>`
   const branchesList =  `<ul>${repos.map(r => '<li>' + `<a href= https://github.com/repos/${username}/${r.name}/branches`+ username + '</a>' +' '+ r.name +'<a href="#"'+'onclick="getBranches(this)">Get Branches</a></li>').join('')}</ul>`
