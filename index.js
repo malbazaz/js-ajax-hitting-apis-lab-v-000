@@ -25,6 +25,7 @@ function displayRepositories(){
      onclick='getBranches(this)'> Get Branches </a>
      </li>`
   }).join('')
+  let repoList = `<ul> ${list}</ul>`
   document.getElementById("repositories").innerHTML = repoList
 }
 
