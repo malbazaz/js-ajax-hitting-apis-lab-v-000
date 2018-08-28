@@ -47,13 +47,13 @@ function getBranches(el) {
 
 function displayBranches() {
   const branches = JSON.parse(this.responseText)
-  const list = commits.map(commit => {
-    return `<li> user: ${commit.author.login}, name: ${commit.commit.author.name}, message: ${commit.commit.message}</li>`
+  const list = branches.map(commit => {
+    return `<li> username: ${branch.username}, name: ${commit.commit.author.name}, message: ${commit.commit.message}</li>`
   }).join('')
   const detailsList = `<ul>${list}</ul>`
   document.getElementById("details").innerHTML = detailsList
 }
-  
+
   const detailsList = `<ul>${branches.map(branch => '<li><strong>' + branch.username + '</strong> - ' + '</li>').join('')}</ul>`
   document.getElementById("details").innerHTML = detailsList
 }
