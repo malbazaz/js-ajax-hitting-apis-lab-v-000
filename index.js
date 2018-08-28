@@ -12,7 +12,7 @@ function displayRepositories(event, data){
   console.log(repos)
   let username = document.getElementById("username").value
   const repoList = `<ul> ${repos.map(r => '<li>' + `<a href = https://github.com/users/${username}/${r.name}>`+ r.name +'</a>'+' ' + '<a href="#"' + 'onclick="getCommits(this)"> Get Commits </a> </li>').join('')}</ul>`
-  const branchesList =  `<ul>${repos.map(r => '<li>' + `<a href= https://github.com/repos/${username}/${r.name}/branches`+ username + '</a>'      r.name +' '+ username +' '+  +' '+ 'onclick="getBranches(this)">Get Branches</a></li>').join('')}</ul>`
+  const branchesList =  `<ul>${repos.map(r => '<li>' + `<a href= https://github.com/repos/${username}/${r.name}/branches`+ username + '</a>' +' '+ r.name +' ' +' '+  +' '+ 'onclick="getBranches(this)">Get Branches</a></li>').join('')}</ul>`
   document.getElementById("repositories").innerHTML = repoList + branchesList
 }
 
