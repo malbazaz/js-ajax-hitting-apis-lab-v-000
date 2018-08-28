@@ -47,7 +47,7 @@ function getBranches(el) {
 
 function displayBranches() {
   const branches = JSON.parse(this.responseText)
-  const list = branches.map(commit => {
+  const list = branches.map(branch => {
     return `<li> username: ${branch.username}</li>`
   }).join('')
   const detailsList = `<ul>${list}</ul>`
