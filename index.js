@@ -35,7 +35,6 @@ function getCommits(el) {
   const name = dataset.username
   console.log("data", dataset)
   const req = new XMLHttpRequest()
-  let username = document.getElementById("username").value
   req.addEventListener("load", displayCommits)
   req.open("GET", `https://api.github.com/repos/${username}/${datarep}/commits`)
   req.send()
@@ -51,11 +50,13 @@ function displayCommits() {
 }
 
 function getBranches(el) {
-  const name = el.dataset.repos.full_name
+  let dataset = el.dataset
+  const datarep = dataset.repository
+  const name = dataset.username
   const req = new XMLHttpRequest()
   let username = document.getElementById("username").value
   req.addEventListener("load", displayBranches)
-  req.open("GET", `https://api.github.com/repos/${name}/branches`)
+  req.open("GET", `https://api.github.com/repos/${username}/${datarep}/branches`)
   req.send()
 }
 
