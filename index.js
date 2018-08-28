@@ -7,7 +7,7 @@ function getRepositories(){
 
 }
 
-function displayRepositories(event, data){
+function displayRepositories(){
   var repos = JSON.parse(this.responseText)
   console.log(repos)
   let username = document.getElementById("username").value
