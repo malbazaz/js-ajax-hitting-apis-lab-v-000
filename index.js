@@ -17,7 +17,7 @@ function displayRepositories(event, data){
 }
 
 function getCommits(el) {
-  const name = el.dataset.fullname
+  const name = el.dataset.full_name
   console.log("name", name)
   const req = new XMLHttpRequest()
   let username = document.getElementById("username").value
