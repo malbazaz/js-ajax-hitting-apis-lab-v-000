@@ -3,6 +3,7 @@ function getRepositories(){
   let username = document.getElementById("username")
   req.open("GET", `https://api.github.com/${username}/repos`)
   req.send()
+  debugger;
   req.addEventListener("load", displayRepositories)
 }
 
