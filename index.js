@@ -18,11 +18,11 @@ function displayRepositories(){
      <a href="#"
      data-repository="${r.name}"
      data-username="${r.owner.login}"
-     onclick='getCommits(this)'> Get Commits </a> 
+     onclick='getCommits(this)'> Get Commits </a>
      <a href="#"
      data-repository="${r.name}"
      data-username="${r.owner.login}"
-     onclick='getBranches(this)'> Get Commits </a> 
+     onclick='getBranches(this)'> Get Branches </a>
      </li>`
   }).join(' ')
   const repoList = `<ul> ${repos.map(r => '<li>' + `<a href = https://github.com/users/${username}/${r.name}>`+ r.name +'</a>'+' ' + '<a href="#"' + 'onclick="getCommits(this)"> Get Commits </a> </li>').join('')}</ul>`
