@@ -14,7 +14,7 @@ function displayRepositories(){
 
   const list = repos.map(r=>{
       console.log(r)
-    `<a href=${r.html_url}>${r.name}</a>
+    return `<li><a href=${r.html_url}>${r.name}</a>
      <a href="#"
      data-repository="${r.name}"
      data-username="${r.owner.login}"
