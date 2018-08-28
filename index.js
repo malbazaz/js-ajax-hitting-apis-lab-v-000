@@ -8,7 +8,6 @@ function getRepositories(){
 }
 
 function displayRepositories(event, data){
-    debugger;
   var repos = JSON.parse(this.responseText)
   console.log(repos)
   let username = document.getElementById("username").value
