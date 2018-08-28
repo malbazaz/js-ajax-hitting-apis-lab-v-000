@@ -32,7 +32,7 @@ function displayCommits() {
     return `<li> user: ${commit.author.login}, name: ${commit.commit.author.name}, message: ${commit.commit.message}</li>`
   }).join('')
   const commitsList = `<ul>${list}</ul>`
-  document.getElementById("commits").innerHTML = commitsList
+  document.getElementById("details").innerHTML = commitsList
 }
 
 function getBranches(el) {
