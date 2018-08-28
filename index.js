@@ -48,12 +48,8 @@ function getBranches(el) {
 function displayBranches() {
   const branches = JSON.parse(this.responseText)
   const list = branches.map(commit => {
-    return `<li> username: ${branch.username}, name: ${commit.commit.author.name}, message: ${commit.commit.message}</li>`
+    return `<li> username: ${branch.username}</li>`
   }).join('')
   const detailsList = `<ul>${list}</ul>`
-  document.getElementById("details").innerHTML = detailsList
-}
-
-  const detailsList = `<ul>${branches.map(branch => '<li><strong>' + branch.username + '</strong> - ' + '</li>').join('')}</ul>`
   document.getElementById("details").innerHTML = detailsList
 }
