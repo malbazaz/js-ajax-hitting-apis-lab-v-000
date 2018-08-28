@@ -29,8 +29,10 @@ function getCommits(el) {
 function displayCommits() {
   const commits = JSON.parse(this.responseText)
   const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.author.login + '</strong> - ' + commit.commit.message + '</li>').join('')}</ul>`
+console.log(commitsList)
   document.getElementById("commits").innerHTML = commitsList
 }
+
 function getBranches(el) {
   debugger;
   const name = el.dataset.repo
