@@ -30,7 +30,7 @@ function displayRepositories(){
 }
 
 function getCommits(el) {
-  debugger;
+  console.log(el)
   const name = el.dataset.full_name
   console.log("name", name)
   const req = new XMLHttpRequest()
