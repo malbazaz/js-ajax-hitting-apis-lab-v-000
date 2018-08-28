@@ -11,8 +11,9 @@ function displayRepositories(){
   var repos = JSON.parse(this.responseText)
   console.log(repos)
   let username = document.getElementById("username").value
-  console.log(r)
+
   const list = repos.map(r=>{
+      console.log(r)
     `<a href=${r.html_url}>${r.name}</a> <a href="#" onclick=${getCommits(this)}> Get Commits </a> </li>`
   })
   const repoList = `<ul> ${repos.map(r => '<li>' + `<a href = https://github.com/users/${username}/${r.name}>`+ r.name +'</a>'+' ' + '<a href="#"' + 'onclick="getCommits(this)"> Get Commits </a> </li>').join('')}</ul>`
