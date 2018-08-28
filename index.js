@@ -54,7 +54,6 @@ function getBranches(el) {
   const datarep = dataset.repository
   const name = dataset.username
   const req = new XMLHttpRequest()
-  let username = document.getElementById("username").value
   req.addEventListener("load", displayBranches)
   req.open("GET", `https://api.github.com/repos/${username}/${datarep}/branches`)
   req.send()
