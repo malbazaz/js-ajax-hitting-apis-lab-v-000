@@ -40,6 +40,6 @@ function getBranches(el) {
 
 function displayBranches() {
   const branches = JSON.parse(this.responseText)
-  const detailsList = `<ul>${branches.map(commit => '<li><strong>' + commit.author.login + '</strong> - ' + commit.commit.message + '</li>').join('')}</ul>`
+  const detailsList = `<ul>${branches.map(branch => '<li><strong>' + branch.author.login + '</strong> - ' + commit.commit.message + '</li>').join('')}</ul>`
   document.getElementById("details").innerHTML = detailsList
 }
